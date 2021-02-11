@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="79I-My-IZZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pizza Detail View Controller-->
+        <scene sceneID="RPa-JA-Bdb">
+            <objects>
+                <viewController id="vy4-iD-t6H" customClass="PizzaDetailViewController" customModule="PizzaSSCaculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B5V-Xa-kTh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="V98-8f-r6I">
+                                <rect key="frame" x="59" y="254" width="296" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="fF0-d8-U3q"/>
+                                    <constraint firstAttribute="width" secondItem="V98-8f-r6I" secondAttribute="height" multiplier="75:76" id="qsU-0k-3Yu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pary Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaG-LG-iXP" customClass="PizzaLabelTitle" customModule="PizzaSSCaculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="624" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza Time!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4K-Wp-rz1" customClass="PizzaLabel" customModule="PizzaSSCaculator" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="163.5" width="331" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gjP-uA-Tih"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gjP-uA-Tih" firstAttribute="trailing" secondItem="xaG-LG-iXP" secondAttribute="trailing" constant="20" id="0s6-Ir-Dan"/>
+                            <constraint firstItem="V98-8f-r6I" firstAttribute="top" secondItem="b4K-Wp-rz1" secondAttribute="bottom" constant="70" id="130-UY-M75"/>
+                            <constraint firstItem="b4K-Wp-rz1" firstAttribute="centerX" secondItem="gjP-uA-Tih" secondAttribute="centerX" id="LGJ-BC-H1k"/>
+                            <constraint firstItem="xaG-LG-iXP" firstAttribute="leading" secondItem="gjP-uA-Tih" secondAttribute="leading" constant="20" id="Ons-qI-Iv2"/>
+                            <constraint firstItem="b4K-Wp-rz1" firstAttribute="width" secondItem="B5V-Xa-kTh" secondAttribute="width" multiplier="0.8" id="cb0-4a-VxB"/>
+                            <constraint firstItem="gjP-uA-Tih" firstAttribute="bottom" secondItem="V98-8f-r6I" secondAttribute="bottom" constant="254" id="kas-VM-dw1"/>
+                            <constraint firstItem="xaG-LG-iXP" firstAttribute="top" secondItem="V98-8f-r6I" secondAttribute="bottom" constant="70" id="oi9-1H-gOU"/>
+                            <constraint firstItem="V98-8f-r6I" firstAttribute="centerX" secondItem="gjP-uA-Tih" secondAttribute="centerX" id="rIz-wb-Pcf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pizzaImage" destination="V98-8f-r6I" id="2jm-Yb-KEK"/>
+                        <outlet property="pizzaPartyLabel" destination="xaG-LG-iXP" id="W1d-WS-j2S"/>
+                        <outlet property="pizzasAmountLabel" destination="b4K-Wp-rz1" id="VTT-nq-0Gn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hbo-uD-LdP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133.33333333333334" y="-58.258928571428569"/>
+        </scene>
+        <!--Pizza Calculator View Controller-->
+        <scene sceneID="0M3-kD-ckR">
+            <objects>
+                <viewController id="79I-My-IZZ" customClass="PizzaCalculatorViewController" customModule="PizzaSSCaculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3a6-52-Xoj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hPG-9W-jKb">
+                                <rect key="frame" x="41.5" y="245" width="331" height="406.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wnw-RB-9Ld">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="62.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many people eating?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qg-BR-PrY" customClass="PizzaLabel" customModule="PizzaSSCaculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number of guests for the party..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxQ-rd-HGU" customClass="PizzaTextField" customModule="PizzaSSCaculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28.5" width="331" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AXM-hD-3vI">
+                                        <rect key="frame" x="0.0" y="82.5" width="331" height="59.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How hungry aa yyaa ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0Y-Uy-VZS" customClass="PizzaLabel" customModule="PizzaSSCaculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hd7-ni-Nfl" customClass="PizzaSegment" customModule="PizzaSSCaculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28.5" width="331" height="32"/>
+                                                <segments>
+                                                    <segment title="Kinda"/>
+                                                    <segment title="Hungry"/>
+                                                    <segment title="Starving"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pht-PD-fKd">
+                                        <rect key="frame" x="0.0" y="162" width="331" height="244.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where ya getting ya pie from?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkg-1g-fui" customClass="PizzaLabel" customModule="PizzaSSCaculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NO1-Kj-3xf" customClass="PizzaPicker" customModule="PizzaSSCaculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28.5" width="331" height="216"/>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghd-Rq-Qnh" customClass="PizzaButton" customModule="PizzaSSCaculator" customModuleProvider="target">
+                                <rect key="frame" x="124" y="691.5" width="166" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateButtonTapped:" destination="79I-My-IZZ" eventType="touchUpInside" id="eed-ju-e89"/>
+                                    <segue destination="vy4-iD-t6H" kind="presentation" identifier="toCalculateVC" id="ee7-3R-hhj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍕Pizza Calculator🍕" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHP-wE-shx" customClass="PizzaLabelTitle" customModule="PizzaSSCaculator" customModuleProvider="target">
+                                <rect key="frame" x="58" y="183.5" width="298" height="21.5"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zN1-zh-7S8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hPG-9W-jKb" firstAttribute="top" secondItem="QHP-wE-shx" secondAttribute="bottom" constant="40" id="0O8-f2-rwW"/>
+                            <constraint firstItem="Ghd-Rq-Qnh" firstAttribute="centerX" secondItem="NO1-Kj-3xf" secondAttribute="centerX" id="2Fs-FA-Rik"/>
+                            <constraint firstItem="hPG-9W-jKb" firstAttribute="centerY" secondItem="3a6-52-Xoj" secondAttribute="centerY" id="Cdm-r3-qPJ"/>
+                            <constraint firstItem="QHP-wE-shx" firstAttribute="centerX" secondItem="hPG-9W-jKb" secondAttribute="centerX" id="KUJ-1w-1ko"/>
+                            <constraint firstItem="hPG-9W-jKb" firstAttribute="width" secondItem="3a6-52-Xoj" secondAttribute="width" multiplier="0.8" id="Pmj-sv-bgD"/>
+                            <constraint firstItem="QHP-wE-shx" firstAttribute="width" secondItem="hPG-9W-jKb" secondAttribute="width" multiplier="0.9" id="awi-rB-fhL"/>
+                            <constraint firstItem="Ghd-Rq-Qnh" firstAttribute="width" secondItem="NO1-Kj-3xf" secondAttribute="width" multiplier="0.5" id="oEu-ja-3zJ"/>
+                            <constraint firstItem="hPG-9W-jKb" firstAttribute="centerX" secondItem="3a6-52-Xoj" secondAttribute="centerX" id="rW1-pJ-WPW"/>
+                            <constraint firstItem="Ghd-Rq-Qnh" firstAttribute="top" secondItem="hPG-9W-jKb" secondAttribute="bottom" constant="40" id="tUT-m5-e1A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hungerSegmentedControl" destination="hd7-ni-Nfl" id="I37-Ax-Uab"/>
+                        <outlet property="peopleCountTextField" destination="kxQ-rd-HGU" id="LPj-r8-WrC"/>
+                        <outlet property="restuarantsPickerView" destination="NO1-Kj-3xf" id="rZ9-uG-IMV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gxd-1q-H9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-972" y="-58"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pizza" width="588" height="287"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
